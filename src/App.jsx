@@ -11,11 +11,11 @@ function App() {
     <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden  ">
       <section
         id="grid"
-        className="w-[100svw] min-h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] bg-[linear-gradient(to_right,#0c0c0c16_1px,transparent_1px),linear-gradient(to_bottom,#0c0c0c16_1px,transparent_1px)] bg-[size:56px_56px] text-[#0c0c0c]  ">
+        className="w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] bg-[linear-gradient(to_right,#0c0c0c16_1px,transparent_1px),linear-gradient(to_bottom,#0c0c0c16_1px,transparent_1px)] bg-[size:56px_56px] text-[#0c0c0c]  ">
         <div className="max-w-full l m-2 p-3 flex flex-col items-center justify-around ">
           {/* Navbar */}
-          <nav className="flex justify-stretch bg-[#1f1f1f] rounded-full item-center fixed top-0 m-2 p-2   gap-5  z-10 drop-shadow-4xl">
-            <img src={logo} width={80} height={80} alt="logo"  />
+          <nav className="flex justify-stretch bg-[#1f1f1f] rounded-full item-center fixed top-0 m-2 p-2  gap-5 z-10 drop-shadow-4xl">
+            <img src={logo} width={100} height={100} alt="logo"  />
             <button className="border-[#F15524] border-2 px-4 py-2 bg-[#F15524] rounded-full transition-all hover:bg-[#F15524] hover:text-white">
               Join Watchlist
             </button>
@@ -76,7 +76,7 @@ function App() {
             </div>
           </div>
 
-          <div className="flex  gap-2 border-b-2 border-t-2 p-1 w-full border-[#232323] flex-col-reverse lg:flex-row">
+          <div className="flex  gap-2 border-b-1 border-t-2 p-1 w-full border-[#232323] flex-col-reverse lg:flex-row">
             <div className="p-10 m-2 ">
               <img
                 src={block}
