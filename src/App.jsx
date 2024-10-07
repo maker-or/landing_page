@@ -1,4 +1,5 @@
 import './App.css'
+import logo from './assets/logo.webp'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <div className="max-w-full l m-2 p-3 flex flex-col items-center justify-around ">
           {/* Navbar */}
           <nav className="flex justify-stretch bg-[#1f1f1f] rounded-full item-center fixed top-0 m-2 p-2   gap-5  z-10 drop-shadow-4xl">
-            <img src='/assets/logo.webp' width={80} height={80} alt="logo" />
+            <img src={logo} width={80} height={80} alt="logo" />
             <button className="border-[#F15524] border-2 px-4 py-2 bg-[#F15524] rounded-full transition-all hover:bg-[#F15524] hover:text-white">
               Join Watchlist
             </button>
