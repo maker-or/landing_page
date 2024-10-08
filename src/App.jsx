@@ -1,16 +1,16 @@
 import './App.css'
 import logo from './assets/logo.webp'
 import block from './assets/block.svg'
-import tw from './assets/12.svg'
+import tw from './assets/aii.svg'
 import pla from './assets/pla.svg'
-import edi from './assets/edi.svg'
+import edi from './assets/editior.svg'
 
 
 
 function App() {
 
   return (
-    <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden select-none ">
+    <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden select-none font-display: swap ">
       <section
         id="grid"
         className="w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] bg-[linear-gradient(to_right,#0c0c0c16_1px,transparent_1px),linear-gradient(to_bottom,#0c0c0c16_1px,transparent_1px)] bg-[size:56px_56px] text-[#0c0c0c]  ">
@@ -41,25 +41,24 @@ function App() {
         <div className="max-w-full  m-2 p-2 flex flex-col items-center ">
           <div className="flex  gap-2 border-b-2 border-t-2 p-1 w-full border-[#232323] flex-col lg:flex-row ">
             <div className="p-2 sm:p-4">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Intelligences.</h1>
+              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Intelligences<span className='text-[#F15524]'>.</span></h1>
               <p className="text-[1rem] text-pretty sm:text-[1.5rem]">
                 it dives deep into the entire your space to find exactly what you need,or summaries of complex topics, or quick answers to challenging questions,
               </p>
             </div>
-            <div className="p-2 m-1 ">
+            <div className="p-2 m-1 lg:pb-20 ">
               <img
                 src={tw}
                 width={1000}
                 height={1000}
                 alt="Picture of the author"
-                className='select-none'
               />
             </div>
           </div>
 
           <div className="flex  gap-2 border-b-2 border-t-2 p-1 w-full border-[#232323] flex-col lg:flex-row  ">
             <div className="p-2 border-[#232323] lg:border-r-2">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Planner.</h1>
+              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Planner<span className='text-[#F15524]'>.</span></h1>
               <img
                 src={pla}
                 width={700}
@@ -69,7 +68,7 @@ function App() {
             </div>
 
             <div className="p-2 ">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl">Community.</h1>
+              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl">Community<span className='text-[#F15524]'>.</span></h1>
               <img
                 src={pla}
                 width={700}
@@ -89,7 +88,7 @@ function App() {
               />
             </div>
             <div className="p-2">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Repos.</h1>
+              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Repos<span className='text-[#F15524]'>.</span></h1>
               <p className="text-[1rem] text-pretty sm:text-[1.5rem] ">
                 Acces all notes,question papers and other documentation in
                 one centralized location.
@@ -114,6 +113,14 @@ function App() {
         </div>
       </section>
 
+
+        <section className='w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] items-center'>
+          <div className='className="max-w-full l m-2 p-3 flex flex-col items-center justify-around '>
+
+            <h1 className='text-5xl text-[#0c0c0c] font-Instrument'>Crafted for your learning needs <span className='text-[#F15524]'>.</span></h1>
+            
+          </div>
+        </section>
 
 
     </main>
