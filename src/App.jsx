@@ -4,6 +4,8 @@ import block from './assets/block.svg'
 import tw from './assets/aii.svg'
 import pla from './assets/pla.svg'
 import edi from './assets/editior.svg'
+import circle from './assets/circle.svg'
+
 
 
 
@@ -19,7 +21,7 @@ function App() {
           <nav className="flex justify-stretch bg-[#1f1f1f] rounded-full item-center fixed top-0 m-2 p-2  gap-5 z-10 drop-shadow-4xl">
             <img src={logo} width={100} height={100} alt="logo"  />
             <button className="border-[#F15524] border-2 px-4 py-2 bg-[#F15524] rounded-full transition-all hover:bg-[#F15524] hover:text-white">
-              Join Watchlist
+              Join waitlist
             </button>
           </nav>
           <div className='flex flex-col items-center justify-center lg:max-w-[90svw] '>
@@ -41,9 +43,9 @@ function App() {
         <div className="max-w-full  m-2 p-2 flex flex-col items-center ">
           <div className="flex  gap-2 border-b-2 border-t-2 p-1 w-full border-[#232323] flex-col lg:flex-row ">
             <div className="p-2 sm:p-4">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Intelligences<span className='text-[#F15524]'>.</span></h1>
-              <p className="text-[1rem] text-pretty sm:text-[1.5rem]">
-                it dives deep into the entire your space to find exactly what you need,or summaries of complex topics, or quick answers to challenging questions,
+              <h1 className="text-[2.25rem] text-[#f7eee3] leading-tight font-Instrument font-medium sm:text-6xl ">Intelligences<span className='text-[#F15524]'>.</span></h1>
+              <p className="text-[1rem] text-[#f7eee3] text-pretty sm:text-[1.5rem]">
+              It explores your entire space to find exactly what you need—whether its detailed summaries of complex topics or quick, clear answers to challenging questions.
               </p>
             </div>
             <div className="p-2 m-1 lg:pb-20 ">
@@ -58,7 +60,7 @@ function App() {
 
           <div className="flex  gap-2 border-b-2 border-t-2 p-1 w-full border-[#232323] flex-col lg:flex-row  ">
             <div className="p-2 border-[#232323] lg:border-r-2">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Planner<span className='text-[#F15524]'>.</span></h1>
+              <h1 className="text-[2.25rem]  leading-tight font-Instrument text-[#f7eee3] font-medium sm:text-6xl ">Planner<span className='text-[#F15524]'>.</span></h1>
               <img
                 src={pla}
                 width={700}
@@ -67,14 +69,18 @@ function App() {
               />
             </div>
 
-            <div className="p-2 ">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl">Community<span className='text-[#F15524]'>.</span></h1>
+            <div className="p-2 flex-row items-center justify-center  w-1/2 ">
+              <h1 className="text-[2.25rem] text-[#f7eee3] leading-tight font-Instrument font-medium sm:text-6xl sm:pb-3">Community<span className='text-[#F15524]'>.</span></h1>
+              <div className='flex items-center justify-center  p-2'>
               <img
-                src={pla}
-                width={700}
-                height={500}
+                src={circle}
+                width={400}
+                height={400}
                 alt="Picture of the author"
+                className='items-center'
               />
+              </div>
+
             </div>
           </div>
 
@@ -88,8 +94,8 @@ function App() {
               />
             </div>
             <div className="p-2">
-              <h1 className="text-[2.25rem]  leading-tight font-Instrument font-medium sm:text-6xl ">Repos<span className='text-[#F15524]'>.</span></h1>
-              <p className="text-[1rem] text-pretty sm:text-[1.5rem] ">
+              <h1 className="text-[2.25rem] text-[#f7eee3] leading-tight font-Instrument font-medium sm:text-6xl ">Repos<span className='text-[#F15524]'>.</span></h1>
+              <p className="text-[1rem] text-[#f7eee3] text-pretty sm:text-[1.5rem] ">
                 Acces all notes,question papers and other documentation in
                 one centralized location.
               </p>
@@ -115,9 +121,16 @@ function App() {
 
 
         <section className='w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] items-center'>
-          <div className='className="max-w-full l m-2 p-3 flex flex-col items-center justify-around '>
+          <div className='className="max-w-full l m-2 p-3 flex flex-col items-right justify-around gap-4 '>
 
             <h1 className='text-5xl text-[#0c0c0c] font-Instrument'>Crafted for your learning needs <span className='text-[#F15524]'>.</span></h1>
+            <div className='flex w-[80svw]  items-center  gap-2 p-4'>
+            <form action="" className='text-[#0c0c0c] '> 
+              <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' />
+            </form>
+            <button type="button" className='bg-[#F15524] px-4 py-3 rounded-md'>join waitlist</button>
+            </div>
+
             
           </div>
         </section>
