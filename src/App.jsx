@@ -96,7 +96,7 @@ function App() {
             <div className="p-2">
               <h1 className="text-[2.25rem] text-[#f7eee3] leading-tight font-Instrument font-medium sm:text-6xl ">Repos<span className='text-[#F15524]'>.</span></h1>
               <p className="text-[1rem] text-[#f7eee3] text-pretty sm:text-[1.5rem] ">
-                Acces all notes,question papers and other documentation in
+                Access all notes,question papers and other documentation in
                 one centralized location.
               </p>
             </div>
@@ -128,7 +128,7 @@ function App() {
             <form action="" className='text-[#0c0c0c] '> 
               <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' />
             </form>
-            <button type="button" className='bg-[#F15524] px-4 py-3 rounded-md'>join waitlist</button>
+            <button type="button" className='bg-[#F15524] px-5 py-3 rounded-md'>join</button>
             </div>
 
             
