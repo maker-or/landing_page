@@ -7,6 +7,7 @@ import edi from './assets/editior.svg'
 import circle from './assets/circle.svg'
 import { useState } from 'react'
 import axios from 'axios'
+import { useRef } from 'react'
 
 
 
@@ -29,6 +30,11 @@ function App() {
 
     })
   }
+  const bottomSectionRef = useRef(null); 
+
+  const scrollToBottom = () => {
+    bottomSectionRef.current.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the bottom
+  };
 
   return (
     <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden select-none font-display: swap ">
@@ -39,7 +45,7 @@ function App() {
           {/* Navbar */}
           <nav className="flex justify-stretch bg-[#1f1f1f] rounded-full item-center fixed top-0 m-2 p-2  gap-5 z-10 drop-shadow-4xl">
             <img src={logo} width={100} height={100} alt="logo"  />
-            <button className="border-[#F15524] border-2 px-4 py-2 bg-[#F15524] rounded-full transition-all hover:bg-[#F15524] hover:text-white">
+            <button className="border-[#F15524] border-2 px-4 py-2 bg-[#F15524] rounded-full transition-all hover:bg-[#F15524] hover:text-white" onClick={scrollToBottom}>
               Join waitlist
             </button>
           </nav>
@@ -139,7 +145,7 @@ function App() {
       </section>
 
 
-        <section className='w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] items-center'>
+        <section className='w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] items-center' ref={bottomSectionRef}>
           <div className='className="max-w-full l m-2 p-3 flex flex-col items-right justify-around gap-4 '>
 
             <h1 className='text-5xl text-[#0c0c0c] font-Instrument'>Crafted for your learning needs <span className='text-[#F15524]'>.</span></h1>
@@ -147,7 +153,8 @@ function App() {
             <form action="" className='text-[#0c0c0c]' onSubmit={handleSummit}  > 
               <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' onChange={(e)=>setname(e.target.value)} value={name} autoComplete='on'/>
             </form>
-            <button type="button" className='bg-[#F15524] px-5 py-3 rounded-md'>join</button>
+            <button type="submit" className='bg-[#F15524] px-5 py-3 rounded-md' onClick={handleSummit}>join</button>
+
             </div>
 
             
