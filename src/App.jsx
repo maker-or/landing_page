@@ -8,7 +8,8 @@ import circle from './assets/circle.svg'
 import { useState } from 'react'
 import axios from 'axios'
 import { useRef } from 'react'
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -26,7 +27,7 @@ function App() {
     axios.post('https://api.sheetbest.com/sheets/701ac22e-9f5d-4bc3-8def-8dab0baa3abb',data).then((Response)=>{
       console.log(Response);
       setname('');
-
+      toast.success('Successfully joined the waitlist! 🎉'); 
 
     })
   }
@@ -38,6 +39,8 @@ function App() {
 
   return (
     <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden select-none font-display: swap ">
+       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick />
+      
       <section
         id="grid"
         className="w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] bg-[linear-gradient(to_right,#0c0c0c16_1px,transparent_1px),linear-gradient(to_bottom,#0c0c0c16_1px,transparent_1px)] bg-[size:56px_56px] text-[#0c0c0c]  ">
@@ -154,6 +157,7 @@ function App() {
               <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' onChange={(e)=>setname(e.target.value)} value={name} autoComplete='on'/>
             </form>
             <button type="submit" className='bg-[#F15524] px-5 py-3 rounded-md' onClick={handleSummit}>join</button>
+            
 
             </div>
 
