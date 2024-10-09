@@ -16,10 +16,10 @@ function App() {
   const [name,setname]=useState('');
   const handleSummit=(e) =>{
     e.preventDefault();
-    // console.log(name);
+    console.log(name);
 
     const data={
-        name
+       Name:name
     }
 
     axios.post('https://api.sheetbest.com/sheets/701ac22e-9f5d-4bc3-8def-8dab0baa3abb',data).then((Response)=>{
@@ -144,8 +144,8 @@ function App() {
 
             <h1 className='text-5xl text-[#0c0c0c] font-Instrument'>Crafted for your learning needs <span className='text-[#F15524]'>.</span></h1>
             <div className='flex w-[80svw]  items-center  gap-2 p-4'>
-            <form action="" className='text-[#0c0c0c]' onSubmit={handleSummit}> 
-              <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' onChange={(e)=>setname(e.target.value)} value={name} />
+            <form action="" className='text-[#0c0c0c]' onSubmit={handleSummit}  > 
+              <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' onChange={(e)=>setname(e.target.value)} value={name} autoComplete='on'/>
             </form>
             <button type="button" className='bg-[#F15524] px-5 py-3 rounded-md'>join</button>
             </div>
