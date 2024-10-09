@@ -53,8 +53,8 @@ function App() {
             </button>
           </nav>
           <div className='flex flex-col items-center justify-center lg:max-w-[90svw] '>
-            <h1 className="text-[2.25rem]  leading-tight text-center   font-Instrument italic font-medium mb-4  selection:bg-[#F15524] selection:text-[#0c0c0c] sm:text-6xl lg:max-w-[80%]  ">
-              A Intelligent Companion for Students and Teachers
+            <h1 className="text-[2.25rem]  leading-tight text-center   font-Instrument italic font-medium mb-4  selection:bg-[#F15524] selection:text-[#0c0c0c] sm:text-6xl lg:max-w-[70%]  ">
+              An Intelligent Companion for Students and Teachers
               <span className="text-[#F15524]">.</span>
             </h1>
             <p className="text-[1rem] text-center text-[#0c0c0c]   text-pretty  sm:text-[1.5rem] lg:max-w-2xl  ">
