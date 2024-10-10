@@ -15,39 +15,43 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
-  const [name,setname]=useState('');
-  const handleSummit=(e) =>{
+  const [name, setname] = useState('');
+  const handleSummit = (e) => {
     e.preventDefault();
     console.log(name);
 
-    const data={
-       Name:name
+    const data = {
+      Name: name
     }
 
-    axios.post('https://api.sheetbest.com/sheets/701ac22e-9f5d-4bc3-8def-8dab0baa3abb',data).then((Response)=>{
+    axios.post('https://api.sheetbest.com/sheets/701ac22e-9f5d-4bc3-8def-8dab0baa3abb', data).then((Response) => {
       console.log(Response);
       setname('');
-      toast.success('Successfully joined the waitlist! 🎉'); 
+      toast.success('Successfully joined the waitlist! 🎉');
 
     })
   }
-  const bottomSectionRef = useRef(null); 
+  const bottomSectionRef = useRef(null);
 
   const scrollToBottom = () => {
     bottomSectionRef.current.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the bottom
   };
 
   return (
-    <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden select-none font-display: swap ">
-       <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick />
-      
+    <main className="scroll-smooth selection:bg-[#F15524] overflow-hidden select-none font-display: swap  ">
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop closeOnClick />
+
+
+
       <section
         id="grid"
         className="w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] bg-[linear-gradient(to_right,#0c0c0c16_1px,transparent_1px),linear-gradient(to_bottom,#0c0c0c16_1px,transparent_1px)] bg-[size:56px_56px] text-[#0c0c0c]  ">
-        <div className="max-w-full l m-2 p-3 flex flex-col items-center justify-around ">
+        <div className="max-w-full l m-2 p-3 flex flex-col items-center justify-evenly ">
+
+
           {/* Navbar */}
           <nav className="flex justify-stretch bg-[#1f1f1f] rounded-full item-center fixed top-0 m-2 p-2  gap-5 z-10 drop-shadow-4xl">
-            <img src={logo} width={100} height={100} alt="logo"  />
+            <img src={logo} width={100} height={100} alt="logo" />
             <button className="border-[#F15524] border-2 px-4 py-2 bg-[#F15524] rounded-full transition-all hover:bg-[#F15524] hover:text-white" onClick={scrollToBottom}>
               Join waitlist
             </button>
@@ -63,6 +67,16 @@ function App() {
               and teachers
             </p>
           </div>
+
+          <div className="flex ">
+          <a href="https://www.producthunt.com/posts/sphere-cda81d65-aab8-476c-bcf0-e1f0840b1efd?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sphere&#0045;cda81d65&#0045;aab8&#0045;476c&#0045;bcf0&#0045;e1f0840b1efd" target="_blank">
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=496332&theme=dark" alt="sphere - AI-powered knowledge management platform for colleges | Product Hunt" style={{ width: '250px', height: '54px' }} />
+          </a>
+        </div>
+
+          
+
+
         </div>
       </section>
 
@@ -73,7 +87,7 @@ function App() {
             <div className="p-2 sm:p-4">
               <h1 className="text-[2.25rem] text-[#f7eee3] leading-tight font-Instrument font-medium sm:text-6xl ">Intelligences<span className='text-[#F15524]'>.</span></h1>
               <p className="text-[1rem] text-[#f7eee3] text-pretty sm:text-[1.5rem]">
-              It explores your entire space to find exactly what you need—whether its detailed summaries of complex topics or quick, clear answers to challenging questions.
+                It explores your entire space to find exactly what you need—whether its detailed summaries of complex topics or quick, clear answers to challenging questions.
               </p>
             </div>
             <div className="p-2 m-1 lg:pb-20 ">
@@ -100,13 +114,13 @@ function App() {
             <div className="p-2 flex-row items-center justify-center  w-1/2 ">
               <h1 className="text-[2.25rem] text-[#f7eee3] leading-tight font-Instrument font-medium sm:text-6xl sm:pb-3">Community<span className='text-[#F15524]'>.</span></h1>
               <div className='flex items-center justify-center  p-2'>
-              <img
-                src={circle}
-                width={400}
-                height={400}
-                alt="Picture of the author"
-                className='items-center'
-              />
+                <img
+                  src={circle}
+                  width={400}
+                  height={400}
+                  alt="Picture of the author"
+                  className='items-center'
+                />
               </div>
 
             </div>
@@ -132,7 +146,7 @@ function App() {
 
           <div className="flex  gap-2 border-b-2 border-t-2 p-1 w-full border-[#232323] flex-col lg:flex-row  ">
             <div className="p-2 w-full  lg:flex lg:items-center lg:justify-center ">
-              
+
               <img
                 src={edi}
                 width={1000}
@@ -140,30 +154,30 @@ function App() {
                 alt="Picture of the author"
               />
             </div>
-            </div>
+          </div>
 
 
-          
+
         </div>
       </section>
 
 
-        <section className='w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] items-center' ref={bottomSectionRef}>
-          <div className='className="max-w-full l m-2 p-3 flex flex-col items-right justify-around gap-4 '>
+      <section className='w-[100svw] h-[100svh] flex justify-center overflow-hidden bg-[#f7eee3] items-center' ref={bottomSectionRef}>
+        <div className='className="max-w-full l m-2 p-3 flex flex-col items-right justify-around gap-4 '>
 
-            <h1 className='text-5xl text-[#0c0c0c] font-Instrument'>Crafted for your learning needs <span className='text-[#F15524]'>.</span></h1>
-            <div className='flex w-[80svw]  items-center  gap-2 p-4'>
-            <form action="" className='text-[#0c0c0c]' onSubmit={handleSummit}  > 
-              <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' onChange={(e)=>setname(e.target.value)} value={name} autoComplete='on'/>
+          <h1 className='text-5xl text-[#0c0c0c] font-Instrument'>Crafted for your learning needs <span className='text-[#F15524]'>.</span></h1>
+          <div className='flex w-[80svw]  items-center  gap-2 p-4'>
+            <form action="" className='text-[#0c0c0c]' onSubmit={handleSummit}  >
+              <input type="email" name="" id="" className='outline-none  h-12 rounded-md p-3 bg-[#0c0c0c] text-[#ffffff] placeholder-[#fff]' placeholder='your@mail.com' onChange={(e) => setname(e.target.value)} value={name} autoComplete='on' />
             </form>
             <button type="submit" className='bg-[#F15524] px-5 py-3 rounded-md' onClick={handleSummit}>join</button>
-            
 
-            </div>
 
-            
           </div>
-        </section>
+
+
+        </div>
+      </section>
 
 
     </main>
