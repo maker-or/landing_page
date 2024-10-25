@@ -68,11 +68,7 @@ function App() {
             </p>
           </div>
 
-          <div className="flex ">
-          <a href="https://www.producthunt.com/posts/sphere-cda81d65-aab8-476c-bcf0-e1f0840b1efd?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-sphere&#0045;cda81d65&#0045;aab8&#0045;476c&#0045;bcf0&#0045;e1f0840b1efd" target="_blank">
-            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=496332&theme=dark" alt="sphere - AI-powered knowledge management platform for colleges | Product Hunt" style={{ width: '250px', height: '54px' }} />
-          </a>
-        </div>
+
 
           
 
